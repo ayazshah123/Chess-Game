@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Simple Chess PvP</title>
+    <link rel="shortcut icon" href="./favicon.png">
+    <link rel='stylesheet' type='text/css' href='./style.css'>
+</head>
+
+<body class="background">
+    <h1 class="title">Chess</h1>
+    <h4>Made by Ayushi and Tirth</h4>
+
+    <div class="modal-container">
+        <div class="modal">
+            <h2>Info</h2>
+            <hr /><span class="message"></span>
+            <hr />
+
+            <div class="modal-btns">
+                <button class="btn-rook" onclick="pawnToRook()">Rook</button>
+                <button class="btn-knight" onclick="pawnToKnight()">Knight</button>
+                <button class="btn-bishop" onclick="pawnToBishop()">Bishop</button>
+                <button class="btn-queen" onclick="pawnToQueen()">Queen</button>
+                <button class="btn-close" onclick="closeBtn()">Close</button>
+                <button class="btn-refresh" onclick="refresh()">Refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="window-btns">
+        <button class="btn-refresh" id="1" onclick="refresh()">Refresh</button><br>
+        <button class="btn-undo" id="2" onclick="undo()">Undo</button>
+    </div>
+    <table id="chessBoard"></table>
+    <script type='text/javascript' src='./script.js'></script>
+</body>
+
+</html>

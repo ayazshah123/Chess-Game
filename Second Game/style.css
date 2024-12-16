@@ -1,0 +1,198 @@
+body {
+    font-family: Courier New, monospace;
+    pointer-events: auto;
+}
+
+body.modal-open {
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 0.9;
+    font-size: 42;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-size: 18;
+    line-height: 0.0;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+td {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 48;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+hr {
+    border: 0px;
+    border-top: 1px solid lightgray;
+}
+
+span {
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.background {
+    background-color: #882d03;
+    background-image: linear-gradient(90deg, rgba(211, 112, 0, 0.07) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(211, 112, 0, .13) 50%, transparent 50%),
+        linear-gradient(90deg, transparent 50%, rgba(211, 112, 0, .17) 50%),
+        linear-gradient(90deg, transparent 50%, rgba(211, 112, 0, .19) 50%);
+    background-size: 13px, 29px, 37px, 53px;
+}
+
+.Black {
+    background-color: green;
+}
+
+.White {
+    background-color: white;
+}
+
+.White:hover {
+    background-color: rgba(255, 255, 255, 0.955);
+  }
+  
+  .Black:hover {
+    background-color: #008000dd;
+  }
+
+.piece-selected {
+    box-shadow: inset 0 0 0 1.5px #882d03;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 0px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 25%;
+    height: 15%;
+    border: 2px solid black;
+}
+
+.modal-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.modal-btns button {
+    font-size: 16;
+    font-family: Courier New, monospace;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+    font-weight: bold;
+    user-select: none;
+    height: 40px;
+}
+
+.modal-btns button:hover {
+    background-color: darkgreen;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .5s;
+}
+
+.btn-refresh {
+    font-size: 18;
+    font-family: Courier New, monospace;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+    font-weight: bold;
+    user-select: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-undo {
+    font-size: 18;
+    font-family: Courier New, monospace;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+    font-weight: bold;
+    user-select: none;
+    margin-right: 10px;
+}
+
+.window-btns button:hover {
+    background-color: darkgreen;
+}
+
+.window-btns {
+    width: 20%;
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    text-align: right;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        padding: 10px;
+        width: 70%;
+        height: 45%;
+    }
+
+    span,
+    .modal-btns button {
+        font-size: 16;
+    }
+}
